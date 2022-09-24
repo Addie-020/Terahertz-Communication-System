@@ -1,0 +1,15 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Fri Dec  3 14:25:35 2021
+| Host         : DESKTOP-HEGMK6F running 64-bit major release  (build 9200)
+| Command      : report_bus_skew -warn_on_violation -file fsk_top_bus_skew_routed.rpt -pb fsk_top_bus_skew_routed.pb -rpx fsk_top_bus_skew_routed.rpx
+| Design       : fsk_top
+| Device       : 7a35t-fgg484
+| Speed File   : -2  PRODUCTION 1.23 2018-06-13
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+

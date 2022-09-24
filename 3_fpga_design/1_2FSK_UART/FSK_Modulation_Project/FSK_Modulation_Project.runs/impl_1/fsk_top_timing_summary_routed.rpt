@@ -1,0 +1,1475 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Fri Dec  3 14:25:35 2021
+| Host         : DESKTOP-HEGMK6F running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -file fsk_top_timing_summary_routed.rpt -pb fsk_top_timing_summary_routed.pb -rpx fsk_top_timing_summary_routed.rpx -warn_on_violation
+| Design       : fsk_top
+| Device       : 7a35t-fgg484
+| Speed File   : -2  PRODUCTION 1.23 2018-06-13
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (2)
+6. checking no_output_delay (14)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (2)
+------------------------------
+ There are 2 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (14)
+--------------------------------
+ There are 14 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     13.465        0.000                      0                  127        0.120        0.000                      0                  127        6.958        0.000                       0                    96  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock                   Waveform(ns)       Period(ns)      Frequency(MHz)
+-----                   ------------       ----------      --------------
+sys_clk                 {0.000 10.000}     20.000          50.000          
+  clk_sample_clk_wiz_0  {0.000 7.812}      15.625          64.000          
+  clkfbout_clk_wiz_0    {0.000 10.000}     20.000          50.000          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock                       WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----                       -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+sys_clk                                                                                                                                                                   7.000        0.000                       0                     1  
+  clk_sample_clk_wiz_0       13.465        0.000                      0                  127        0.120        0.000                      0                  127        6.958        0.000                       0                    92  
+  clkfbout_clk_wiz_0                                                                                                                                                     18.408        0.000                       0                     3  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys_clk
+  To Clock:  sys_clk
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        7.000ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sys_clk
+Waveform(ns):       { 0.000 10.000 }
+Period(ns):         20.000
+Sources:            { sys_clk }
+
+Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     MMCME2_ADV/CLKIN1  n/a            1.249         20.000      18.751     MMCME2_ADV_X0Y0  clk_gen_inst/inst/mmcm_adv_inst/CLKIN1
+Max Period        n/a     MMCME2_ADV/CLKIN1  n/a            100.000       20.000      80.000     MMCME2_ADV_X0Y0  clk_gen_inst/inst/mmcm_adv_inst/CLKIN1
+Low Pulse Width   Slow    MMCME2_ADV/CLKIN1  n/a            3.000         10.000      7.000      MMCME2_ADV_X0Y0  clk_gen_inst/inst/mmcm_adv_inst/CLKIN1
+Low Pulse Width   Fast    MMCME2_ADV/CLKIN1  n/a            3.000         10.000      7.000      MMCME2_ADV_X0Y0  clk_gen_inst/inst/mmcm_adv_inst/CLKIN1
+High Pulse Width  Slow    MMCME2_ADV/CLKIN1  n/a            3.000         10.000      7.000      MMCME2_ADV_X0Y0  clk_gen_inst/inst/mmcm_adv_inst/CLKIN1
+High Pulse Width  Fast    MMCME2_ADV/CLKIN1  n/a            3.000         10.000      7.000      MMCME2_ADV_X0Y0  clk_gen_inst/inst/mmcm_adv_inst/CLKIN1
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_sample_clk_wiz_0
+  To Clock:  clk_sample_clk_wiz_0
+
+Setup :            0  Failing Endpoints,  Worst Slack       13.465ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.120ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        6.958ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             13.465ns  (required time - arrival time)
+  Source:                 fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Destination:            fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1/ADDRARDADDR[8]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Path Group:             clk_sample_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            15.625ns  (clk_sample_clk_wiz_0 rise@15.625ns - clk_sample_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        1.368ns  (logic 0.398ns (29.085%)  route 0.970ns (70.915%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.075ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.832ns = ( 14.793 - 15.625 ) 
+    Source Clock Delay      (SCD):    -0.348ns
+    Clock Pessimism Removal (CPR):    0.410ns
+  Clock Uncertainty:      0.097ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.180ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         1.427     1.427 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.065     2.492    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.924    -3.433 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.425    -2.008    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081    -1.927 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          1.579    -0.348    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/aclk
+    SLICE_X6Y133         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y133         FDRE (Prop_fdre_C_Q)         0.398     0.050 r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[5]/Q
+                         net (fo=2, routed)           0.970     1.021    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg_n_0_[5]
+    RAMB36_X0Y26         RAMB36E1                                     r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1/ADDRARDADDR[8]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                     15.625    15.625 r  
+    Y18                                               0.000    15.625 r  sys_clk (IN)
+                         net (fo=0)                   0.000    15.625    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         1.361    16.986 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.004    17.989    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.061    11.928 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.357    13.286    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    13.363 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          1.430    14.793    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/aclk
+    RAMB36_X0Y26         RAMB36E1                                     r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1/CLKARDCLK
+                         clock pessimism              0.410    15.202    
+                         clock uncertainty           -0.097    15.106    
+    RAMB36_X0Y26         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ADDRARDADDR[8])
+                                                     -0.620    14.486    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1
+  -------------------------------------------------------------------
+                         required time                         14.486    
+                         arrival time                          -1.021    
+  -------------------------------------------------------------------
+                         slack                                 13.465    
+
+Slack (MET) :             13.487ns  (required time - arrival time)
+  Source:                 fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Destination:            fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1/ADDRARDADDR[3]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Path Group:             clk_sample_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            15.625ns  (clk_sample_clk_wiz_0 rise@15.625ns - clk_sample_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        1.476ns  (logic 0.433ns (29.327%)  route 1.043ns (70.673%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.075ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.832ns = ( 14.793 - 15.625 ) 
+    Source Clock Delay      (SCD):    -0.348ns
+    Clock Pessimism Removal (CPR):    0.410ns
+  Clock Uncertainty:      0.097ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.180ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         1.427     1.427 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.065     2.492    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.924    -3.433 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.425    -2.008    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081    -1.927 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          1.579    -0.348    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/aclk
+    SLICE_X6Y133         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y133         FDRE (Prop_fdre_C_Q)         0.433     0.085 r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[0]/Q
+                         net (fo=2, routed)           1.043     1.129    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg_n_0_[0]
+    RAMB36_X0Y26         RAMB36E1                                     r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1/ADDRARDADDR[3]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                     15.625    15.625 r  
+    Y18                                               0.000    15.625 r  sys_clk (IN)
+                         net (fo=0)                   0.000    15.625    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         1.361    16.986 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.004    17.989    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.061    11.928 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.357    13.286    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    13.363 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          1.430    14.793    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/aclk
+    RAMB36_X0Y26         RAMB36E1                                     r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1/CLKARDCLK
+                         clock pessimism              0.410    15.202    
+                         clock uncertainty           -0.097    15.106    
+    RAMB36_X0Y26         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ADDRARDADDR[3])
+                                                     -0.490    14.616    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1
+  -------------------------------------------------------------------
+                         required time                         14.616    
+                         arrival time                          -1.129    
+  -------------------------------------------------------------------
+                         slack                                 13.487    
+
+Slack (MET) :             13.525ns  (required time - arrival time)
+  Source:                 fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Destination:            fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1/ADDRARDADDR[10]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Path Group:             clk_sample_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            15.625ns  (clk_sample_clk_wiz_0 rise@15.625ns - clk_sample_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        1.391ns  (logic 0.398ns (28.605%)  route 0.993ns (71.395%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.008ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.832ns = ( 14.793 - 15.625 ) 
+    Source Clock Delay      (SCD):    -0.414ns
+    Clock Pessimism Removal (CPR):    0.427ns
+  Clock Uncertainty:      0.097ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.180ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         1.427     1.427 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.065     2.492    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.924    -3.433 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.425    -2.008    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081    -1.927 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          1.513    -0.414    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/aclk
+    SLICE_X8Y133         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y133         FDRE (Prop_fdre_C_Q)         0.398    -0.016 r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[7]/Q
+                         net (fo=2, routed)           0.993     0.978    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg_n_0_[7]
+    RAMB36_X0Y26         RAMB36E1                                     r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1/ADDRARDADDR[10]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                     15.625    15.625 r  
+    Y18                                               0.000    15.625 r  sys_clk (IN)
+                         net (fo=0)                   0.000    15.625    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         1.361    16.986 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.004    17.989    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.061    11.928 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.357    13.286    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    13.363 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          1.430    14.793    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/aclk
+    RAMB36_X0Y26         RAMB36E1                                     r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1/CLKARDCLK
+                         clock pessimism              0.427    15.219    
+                         clock uncertainty           -0.097    15.123    
+    RAMB36_X0Y26         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ADDRARDADDR[10])
+                                                     -0.620    14.503    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1
+  -------------------------------------------------------------------
+                         required time                         14.503    
+                         arrival time                          -0.978    
+  -------------------------------------------------------------------
+                         slack                                 13.525    
+
+Slack (MET) :             13.566ns  (required time - arrival time)
+  Source:                 fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Destination:            fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1/ADDRARDADDR[4]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Path Group:             clk_sample_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            15.625ns  (clk_sample_clk_wiz_0 rise@15.625ns - clk_sample_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        1.270ns  (logic 0.398ns (31.334%)  route 0.872ns (68.666%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.075ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.832ns = ( 14.793 - 15.625 ) 
+    Source Clock Delay      (SCD):    -0.348ns
+    Clock Pessimism Removal (CPR):    0.410ns
+  Clock Uncertainty:      0.097ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.180ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         1.427     1.427 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.065     2.492    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.924    -3.433 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.425    -2.008    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081    -1.927 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          1.579    -0.348    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/aclk
+    SLICE_X6Y133         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y133         FDRE (Prop_fdre_C_Q)         0.398     0.050 r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[1]/Q
+                         net (fo=2, routed)           0.872     0.922    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg_n_0_[1]
+    RAMB36_X0Y26         RAMB36E1                                     r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1/ADDRARDADDR[4]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                     15.625    15.625 r  
+    Y18                                               0.000    15.625 r  sys_clk (IN)
+                         net (fo=0)                   0.000    15.625    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         1.361    16.986 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.004    17.989    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.061    11.928 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.357    13.286    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    13.363 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          1.430    14.793    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/aclk
+    RAMB36_X0Y26         RAMB36E1                                     r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1/CLKARDCLK
+                         clock pessimism              0.410    15.202    
+                         clock uncertainty           -0.097    15.106    
+    RAMB36_X0Y26         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ADDRARDADDR[4])
+                                                     -0.617    14.489    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1
+  -------------------------------------------------------------------
+                         required time                         14.489    
+                         arrival time                          -0.922    
+  -------------------------------------------------------------------
+                         slack                                 13.566    
+
+Slack (MET) :             13.616ns  (required time - arrival time)
+  Source:                 fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Destination:            fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1/ADDRARDADDR[9]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Path Group:             clk_sample_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            15.625ns  (clk_sample_clk_wiz_0 rise@15.625ns - clk_sample_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        1.430ns  (logic 0.433ns (30.277%)  route 0.997ns (69.723%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.008ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.832ns = ( 14.793 - 15.625 ) 
+    Source Clock Delay      (SCD):    -0.414ns
+    Clock Pessimism Removal (CPR):    0.427ns
+  Clock Uncertainty:      0.097ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.180ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         1.427     1.427 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.065     2.492    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.924    -3.433 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.425    -2.008    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081    -1.927 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          1.513    -0.414    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/aclk
+    SLICE_X8Y133         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y133         FDRE (Prop_fdre_C_Q)         0.433     0.019 r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[6]/Q
+                         net (fo=2, routed)           0.997     1.016    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg_n_0_[6]
+    RAMB36_X0Y26         RAMB36E1                                     r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1/ADDRARDADDR[9]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                     15.625    15.625 r  
+    Y18                                               0.000    15.625 r  sys_clk (IN)
+                         net (fo=0)                   0.000    15.625    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         1.361    16.986 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.004    17.989    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.061    11.928 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.357    13.286    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    13.363 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          1.430    14.793    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/aclk
+    RAMB36_X0Y26         RAMB36E1                                     r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1/CLKARDCLK
+                         clock pessimism              0.427    15.219    
+                         clock uncertainty           -0.097    15.123    
+    RAMB36_X0Y26         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ADDRARDADDR[9])
+                                                     -0.490    14.633    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1
+  -------------------------------------------------------------------
+                         required time                         14.633    
+                         arrival time                          -1.016    
+  -------------------------------------------------------------------
+                         slack                                 13.616    
+
+Slack (MET) :             13.622ns  (required time - arrival time)
+  Source:                 fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_rom_reg_a/opt_has_pipe.first_q_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Destination:            fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ls/opt_has_pipe.first_q_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Path Group:             clk_sample_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            15.625ns  (clk_sample_clk_wiz_0 rise@15.625ns - clk_sample_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        1.962ns  (logic 0.735ns (37.453%)  route 1.227ns (62.547%))
+  Logic Levels:           2  (LUT4=1 LUT6=1)
+  Clock Path Skew:        0.026ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.795ns = ( 14.830 - 15.625 ) 
+    Source Clock Delay      (SCD):    -0.412ns
+    Clock Pessimism Removal (CPR):    0.410ns
+  Clock Uncertainty:      0.097ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.180ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         1.427     1.427 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.065     2.492    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.924    -3.433 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.425    -2.008    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081    -1.927 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          1.515    -0.412    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_rom_reg_a/aclk
+    SLICE_X8Y135         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_rom_reg_a/opt_has_pipe.first_q_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y135         FDRE (Prop_fdre_C_Q)         0.398    -0.014 f  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_rom_reg_a/opt_has_pipe.first_q_reg[2]/Q
+                         net (fo=4, routed)           0.884     0.870    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_rom_reg_a/first_q[2]
+    SLICE_X7Y135         LUT6 (Prop_lut6_I1_O)        0.232     1.102 r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_rom_reg_a/opt_has_pipe.first_q[7]_i_2__0/O
+                         net (fo=3, routed)           0.343     1.446    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_rom_reg_a/opt_has_pipe.first_q[7]_i_2__0_n_0
+    SLICE_X5Y136         LUT4 (Prop_lut4_I0_O)        0.105     1.551 r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_rom_reg_a/opt_has_pipe.first_q[6]_i_1__1/O
+                         net (fo=1, routed)           0.000     1.551    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ls/D[6]
+    SLICE_X5Y136         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ls/opt_has_pipe.first_q_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                     15.625    15.625 r  
+    Y18                                               0.000    15.625 r  sys_clk (IN)
+                         net (fo=0)                   0.000    15.625    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         1.361    16.986 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.004    17.989    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.061    11.928 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.357    13.286    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    13.363 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          1.467    14.830    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ls/aclk
+    SLICE_X5Y136         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ls/opt_has_pipe.first_q_reg[6]/C
+                         clock pessimism              0.410    15.239    
+                         clock uncertainty           -0.097    15.142    
+    SLICE_X5Y136         FDRE (Setup_fdre_C_D)        0.030    15.172    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ls/opt_has_pipe.first_q_reg[6]
+  -------------------------------------------------------------------
+                         required time                         15.172    
+                         arrival time                          -1.551    
+  -------------------------------------------------------------------
+                         slack                                 13.622    
+
+Slack (MET) :             13.690ns  (required time - arrival time)
+  Source:                 fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Destination:            fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1/ADDRARDADDR[5]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Path Group:             clk_sample_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            15.625ns  (clk_sample_clk_wiz_0 rise@15.625ns - clk_sample_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        1.356ns  (logic 0.433ns (31.921%)  route 0.923ns (68.079%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.008ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.832ns = ( 14.793 - 15.625 ) 
+    Source Clock Delay      (SCD):    -0.414ns
+    Clock Pessimism Removal (CPR):    0.427ns
+  Clock Uncertainty:      0.097ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.180ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         1.427     1.427 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.065     2.492    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.924    -3.433 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.425    -2.008    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081    -1.927 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          1.513    -0.414    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/aclk
+    SLICE_X8Y133         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y133         FDRE (Prop_fdre_C_Q)         0.433     0.019 r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[2]/Q
+                         net (fo=2, routed)           0.923     0.943    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg_n_0_[2]
+    RAMB36_X0Y26         RAMB36E1                                     r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1/ADDRARDADDR[5]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                     15.625    15.625 r  
+    Y18                                               0.000    15.625 r  sys_clk (IN)
+                         net (fo=0)                   0.000    15.625    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         1.361    16.986 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.004    17.989    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.061    11.928 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.357    13.286    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    13.363 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          1.430    14.793    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/aclk
+    RAMB36_X0Y26         RAMB36E1                                     r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1/CLKARDCLK
+                         clock pessimism              0.427    15.219    
+                         clock uncertainty           -0.097    15.123    
+    RAMB36_X0Y26         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ADDRARDADDR[5])
+                                                     -0.490    14.633    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1
+  -------------------------------------------------------------------
+                         required time                         14.633    
+                         arrival time                          -0.943    
+  -------------------------------------------------------------------
+                         slack                                 13.690    
+
+Slack (MET) :             13.698ns  (required time - arrival time)
+  Source:                 fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[9]/C
+                            (rising edge-triggered cell FDRE clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Destination:            fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_0/ADDRARDADDR[12]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Path Group:             clk_sample_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            15.625ns  (clk_sample_clk_wiz_0 rise@15.625ns - clk_sample_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        1.226ns  (logic 0.398ns (32.474%)  route 0.828ns (67.526%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.012ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.828ns = ( 14.797 - 15.625 ) 
+    Source Clock Delay      (SCD):    -0.414ns
+    Clock Pessimism Removal (CPR):    0.427ns
+  Clock Uncertainty:      0.097ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.180ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         1.427     1.427 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.065     2.492    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.924    -3.433 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.425    -2.008    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081    -1.927 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          1.513    -0.414    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/aclk
+    SLICE_X8Y133         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y133         FDRE (Prop_fdre_C_Q)         0.398    -0.016 r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[9]/Q
+                         net (fo=2, routed)           0.828     0.812    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg_n_0_[9]
+    RAMB36_X0Y27         RAMB36E1                                     r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_0/ADDRARDADDR[12]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                     15.625    15.625 r  
+    Y18                                               0.000    15.625 r  sys_clk (IN)
+                         net (fo=0)                   0.000    15.625    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         1.361    16.986 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.004    17.989    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.061    11.928 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.357    13.286    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    13.363 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          1.434    14.797    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/aclk
+    RAMB36_X0Y27         RAMB36E1                                     r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_0/CLKARDCLK
+                         clock pessimism              0.427    15.223    
+                         clock uncertainty           -0.097    15.127    
+    RAMB36_X0Y27         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ADDRARDADDR[12])
+                                                     -0.617    14.510    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_0
+  -------------------------------------------------------------------
+                         required time                         14.510    
+                         arrival time                          -0.812    
+  -------------------------------------------------------------------
+                         slack                                 13.698    
+
+Slack (MET) :             13.703ns  (required time - arrival time)
+  Source:                 fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Destination:            fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_0/ADDRARDADDR[6]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Path Group:             clk_sample_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            15.625ns  (clk_sample_clk_wiz_0 rise@15.625ns - clk_sample_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        1.220ns  (logic 0.398ns (32.622%)  route 0.822ns (67.378%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.012ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.828ns = ( 14.797 - 15.625 ) 
+    Source Clock Delay      (SCD):    -0.414ns
+    Clock Pessimism Removal (CPR):    0.427ns
+  Clock Uncertainty:      0.097ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.180ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         1.427     1.427 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.065     2.492    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.924    -3.433 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.425    -2.008    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081    -1.927 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          1.513    -0.414    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/aclk
+    SLICE_X8Y133         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y133         FDRE (Prop_fdre_C_Q)         0.398    -0.016 r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[3]/Q
+                         net (fo=2, routed)           0.822     0.806    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg_n_0_[3]
+    RAMB36_X0Y27         RAMB36E1                                     r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_0/ADDRARDADDR[6]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                     15.625    15.625 r  
+    Y18                                               0.000    15.625 r  sys_clk (IN)
+                         net (fo=0)                   0.000    15.625    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         1.361    16.986 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.004    17.989    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.061    11.928 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.357    13.286    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    13.363 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          1.434    14.797    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/aclk
+    RAMB36_X0Y27         RAMB36E1                                     r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_0/CLKARDCLK
+                         clock pessimism              0.427    15.223    
+                         clock uncertainty           -0.097    15.127    
+    RAMB36_X0Y27         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ADDRARDADDR[6])
+                                                     -0.617    14.510    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_0
+  -------------------------------------------------------------------
+                         required time                         14.510    
+                         arrival time                          -0.806    
+  -------------------------------------------------------------------
+                         slack                                 13.703    
+
+Slack (MET) :             13.716ns  (required time - arrival time)
+  Source:                 fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_rom_reg_a/opt_has_pipe.first_q_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Destination:            fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ls/opt_has_pipe.first_q_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Path Group:             clk_sample_clk_wiz_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            15.625ns  (clk_sample_clk_wiz_0 rise@15.625ns - clk_sample_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        1.867ns  (logic 0.735ns (39.363%)  route 1.132ns (60.637%))
+  Logic Levels:           2  (LUT3=1 LUT6=1)
+  Clock Path Skew:        0.025ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -0.796ns = ( 14.829 - 15.625 ) 
+    Source Clock Delay      (SCD):    -0.412ns
+    Clock Pessimism Removal (CPR):    0.410ns
+  Clock Uncertainty:      0.097ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.180ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         1.427     1.427 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.065     2.492    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.924    -3.433 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.425    -2.008    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081    -1.927 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          1.515    -0.412    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_rom_reg_a/aclk
+    SLICE_X8Y135         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_rom_reg_a/opt_has_pipe.first_q_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y135         FDRE (Prop_fdre_C_Q)         0.398    -0.014 f  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_rom_reg_a/opt_has_pipe.first_q_reg[2]/Q
+                         net (fo=4, routed)           0.884     0.870    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_rom_reg_a/first_q[2]
+    SLICE_X7Y135         LUT6 (Prop_lut6_I1_O)        0.232     1.102 r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_rom_reg_a/opt_has_pipe.first_q[7]_i_2__0/O
+                         net (fo=3, routed)           0.248     1.350    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_rom_reg_a/opt_has_pipe.first_q[7]_i_2__0_n_0
+    SLICE_X5Y135         LUT3 (Prop_lut3_I0_O)        0.105     1.455 r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_rom_reg_a/opt_has_pipe.first_q[5]_i_1__2/O
+                         net (fo=1, routed)           0.000     1.455    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ls/D[5]
+    SLICE_X5Y135         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ls/opt_has_pipe.first_q_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                     15.625    15.625 r  
+    Y18                                               0.000    15.625 r  sys_clk (IN)
+                         net (fo=0)                   0.000    15.625    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         1.361    16.986 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.004    17.989    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.061    11.928 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.357    13.286    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    13.363 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          1.466    14.829    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ls/aclk
+    SLICE_X5Y135         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ls/opt_has_pipe.first_q_reg[5]/C
+                         clock pessimism              0.410    15.238    
+                         clock uncertainty           -0.097    15.141    
+    SLICE_X5Y135         FDRE (Setup_fdre_C_D)        0.030    15.171    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ls/opt_has_pipe.first_q_reg[5]
+  -------------------------------------------------------------------
+                         required time                         15.171    
+                         arrival time                          -1.455    
+  -------------------------------------------------------------------
+                         slack                                 13.716    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.120ns  (arrival time - required time)
+  Source:                 fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Destination:            fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1/ADDRARDADDR[14]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Path Group:             clk_sample_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_sample_clk_wiz_0 rise@0.000ns - clk_sample_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.302ns  (logic 0.148ns (49.025%)  route 0.154ns (50.975%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.052ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.698ns
+    Source Clock Delay      (SCD):    -0.502ns
+    Clock Pessimism Removal (CPR):    -0.248ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         0.264     0.264 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.704    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.362    -1.659 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.489    -1.170    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.144 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          0.642    -0.502    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/aclk
+    SLICE_X8Y134         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y134         FDRE (Prop_fdre_C_Q)         0.148    -0.354 r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[11]/Q
+                         net (fo=2, routed)           0.154    -0.200    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg_n_0_[11]
+    RAMB36_X0Y26         RAMB36E1                                     r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1/ADDRARDADDR[14]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         0.452     0.452 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.932    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.145    -2.214 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.534    -1.680    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.651 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          0.953    -0.698    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/aclk
+    RAMB36_X0Y26         RAMB36E1                                     r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1/CLKARDCLK
+                         clock pessimism              0.248    -0.450    
+    RAMB36_X0Y26         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_ADDRARDADDR[14])
+                                                      0.130    -0.320    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1
+  -------------------------------------------------------------------
+                         required time                          0.320    
+                         arrival time                          -0.200    
+  -------------------------------------------------------------------
+                         slack                                  0.120    
+
+Slack (MET) :             0.121ns  (arrival time - required time)
+  Source:                 fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ls/opt_has_pipe.first_q_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Destination:            fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Path Group:             clk_sample_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_sample_clk_wiz_0 rise@0.000ns - clk_sample_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.196ns  (logic 0.141ns (71.838%)  route 0.055ns (28.162%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.708ns
+    Source Clock Delay      (SCD):    -0.474ns
+    Clock Pessimism Removal (CPR):    -0.234ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         0.264     0.264 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.704    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.362    -1.659 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.489    -1.170    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.144 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          0.670    -0.474    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ls/aclk
+    SLICE_X5Y136         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ls/opt_has_pipe.first_q_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y136         FDRE (Prop_fdre_C_Q)         0.141    -0.333 r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ls/opt_has_pipe.first_q_reg[6]/Q
+                         net (fo=1, routed)           0.055    -0.278    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/D[6]
+    SLICE_X5Y136         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         0.452     0.452 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.932    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.145    -2.214 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.534    -1.680    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.651 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          0.943    -0.708    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/aclk
+    SLICE_X5Y136         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[6]/C
+                         clock pessimism              0.234    -0.474    
+    SLICE_X5Y136         FDRE (Hold_fdre_C_D)         0.075    -0.399    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[6]
+  -------------------------------------------------------------------
+                         required time                          0.399    
+                         arrival time                          -0.278    
+  -------------------------------------------------------------------
+                         slack                                  0.121    
+
+Slack (MET) :             0.143ns  (arrival time - required time)
+  Source:                 fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ms/opt_has_pipe.first_q_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Destination:            fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ms/opt_has_pipe.first_q_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Path Group:             clk_sample_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_sample_clk_wiz_0 rise@0.000ns - clk_sample_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.287ns  (logic 0.189ns (65.847%)  route 0.098ns (34.153%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.708ns
+    Source Clock Delay      (SCD):    -0.474ns
+    Clock Pessimism Removal (CPR):    -0.247ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         0.264     0.264 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.704    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.362    -1.659 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.489    -1.170    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.144 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          0.670    -0.474    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ms/aclk
+    SLICE_X7Y136         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ms/opt_has_pipe.first_q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y136         FDRE (Prop_fdre_C_Q)         0.141    -0.333 r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ms/opt_has_pipe.first_q_reg[0]/Q
+                         net (fo=6, routed)           0.098    -0.235    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/sin_ms1[0]
+    SLICE_X6Y136         LUT3 (Prop_lut3_I0_O)        0.048    -0.187 r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/plusOp_inferred__1/opt_has_pipe.first_q[1]_i_1/O
+                         net (fo=1, routed)           0.000    -0.187    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ms/D[1]
+    SLICE_X6Y136         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ms/opt_has_pipe.first_q_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         0.452     0.452 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.932    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.145    -2.214 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.534    -1.680    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.651 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          0.943    -0.708    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ms/aclk
+    SLICE_X6Y136         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ms/opt_has_pipe.first_q_reg[1]/C
+                         clock pessimism              0.247    -0.461    
+    SLICE_X6Y136         FDRE (Hold_fdre_C_D)         0.131    -0.330    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ms/opt_has_pipe.first_q_reg[1]
+  -------------------------------------------------------------------
+                         required time                          0.330    
+                         arrival time                          -0.187    
+  -------------------------------------------------------------------
+                         slack                                  0.143    
+
+Slack (MET) :             0.147ns  (arrival time - required time)
+  Source:                 fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Destination:            fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_0/ADDRARDADDR[13]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Path Group:             clk_sample_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_sample_clk_wiz_0 rise@0.000ns - clk_sample_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.387ns  (logic 0.164ns (42.393%)  route 0.223ns (57.607%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.057ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.693ns
+    Source Clock Delay      (SCD):    -0.502ns
+    Clock Pessimism Removal (CPR):    -0.248ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         0.264     0.264 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.704    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.362    -1.659 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.489    -1.170    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.144 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          0.642    -0.502    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/aclk
+    SLICE_X8Y134         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y134         FDRE (Prop_fdre_C_Q)         0.164    -0.338 r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[10]/Q
+                         net (fo=2, routed)           0.223    -0.115    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg_n_0_[10]
+    RAMB36_X0Y27         RAMB36E1                                     r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_0/ADDRARDADDR[13]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         0.452     0.452 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.932    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.145    -2.214 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.534    -1.680    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.651 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          0.958    -0.693    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/aclk
+    RAMB36_X0Y27         RAMB36E1                                     r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_0/CLKARDCLK
+                         clock pessimism              0.248    -0.445    
+    RAMB36_X0Y27         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_ADDRARDADDR[13])
+                                                      0.183    -0.262    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_0
+  -------------------------------------------------------------------
+                         required time                          0.262    
+                         arrival time                          -0.115    
+  -------------------------------------------------------------------
+                         slack                                  0.147    
+
+Slack (MET) :             0.151ns  (arrival time - required time)
+  Source:                 fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ms/opt_has_pipe.first_q_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Destination:            fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ms/opt_has_pipe.first_q_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Path Group:             clk_sample_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_sample_clk_wiz_0 rise@0.000ns - clk_sample_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.284ns  (logic 0.186ns (65.486%)  route 0.098ns (34.514%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.708ns
+    Source Clock Delay      (SCD):    -0.474ns
+    Clock Pessimism Removal (CPR):    -0.247ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         0.264     0.264 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.704    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.362    -1.659 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.489    -1.170    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.144 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          0.670    -0.474    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ms/aclk
+    SLICE_X7Y136         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ms/opt_has_pipe.first_q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y136         FDRE (Prop_fdre_C_Q)         0.141    -0.333 r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ms/opt_has_pipe.first_q_reg[0]/Q
+                         net (fo=6, routed)           0.098    -0.235    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/sin_ms1[0]
+    SLICE_X6Y136         LUT2 (Prop_lut2_I0_O)        0.045    -0.190 r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/plusOp_inferred__1/opt_has_pipe.first_q[0]_i_1/O
+                         net (fo=1, routed)           0.000    -0.190    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ms/D[0]
+    SLICE_X6Y136         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ms/opt_has_pipe.first_q_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         0.452     0.452 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.932    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.145    -2.214 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.534    -1.680    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.651 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          0.943    -0.708    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ms/aclk
+    SLICE_X6Y136         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ms/opt_has_pipe.first_q_reg[0]/C
+                         clock pessimism              0.247    -0.461    
+    SLICE_X6Y136         FDRE (Hold_fdre_C_D)         0.120    -0.341    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ms/opt_has_pipe.first_q_reg[0]
+  -------------------------------------------------------------------
+                         required time                          0.341    
+                         arrival time                          -0.190    
+  -------------------------------------------------------------------
+                         slack                                  0.151    
+
+Slack (MET) :             0.153ns  (arrival time - required time)
+  Source:                 fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Destination:            fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1/ADDRARDADDR[13]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Path Group:             clk_sample_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_sample_clk_wiz_0 rise@0.000ns - clk_sample_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.387ns  (logic 0.164ns (42.338%)  route 0.223ns (57.662%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.052ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.698ns
+    Source Clock Delay      (SCD):    -0.502ns
+    Clock Pessimism Removal (CPR):    -0.248ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         0.264     0.264 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.704    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.362    -1.659 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.489    -1.170    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.144 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          0.642    -0.502    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/aclk
+    SLICE_X8Y134         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y134         FDRE (Prop_fdre_C_Q)         0.164    -0.338 r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg[10]/Q
+                         net (fo=2, routed)           0.223    -0.114    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg_n_0_[10]
+    RAMB36_X0Y26         RAMB36E1                                     r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1/ADDRARDADDR[13]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         0.452     0.452 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.932    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.145    -2.214 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.534    -1.680    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.651 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          0.953    -0.698    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/aclk
+    RAMB36_X0Y26         RAMB36E1                                     r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1/CLKARDCLK
+                         clock pessimism              0.248    -0.450    
+    RAMB36_X0Y26         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_ADDRARDADDR[13])
+                                                      0.183    -0.267    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1
+  -------------------------------------------------------------------
+                         required time                          0.267    
+                         arrival time                          -0.114    
+  -------------------------------------------------------------------
+                         slack                                  0.153    
+
+Slack (MET) :             0.155ns  (arrival time - required time)
+  Source:                 fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ls/opt_has_pipe.first_q_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Destination:            fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Path Group:             clk_sample_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_sample_clk_wiz_0 rise@0.000ns - clk_sample_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.219ns  (logic 0.164ns (74.792%)  route 0.055ns (25.208%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.708ns
+    Source Clock Delay      (SCD):    -0.474ns
+    Clock Pessimism Removal (CPR):    -0.234ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         0.264     0.264 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.704    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.362    -1.659 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.489    -1.170    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.144 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          0.670    -0.474    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ls/aclk
+    SLICE_X6Y135         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ls/opt_has_pipe.first_q_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y135         FDRE (Prop_fdre_C_Q)         0.164    -0.310 r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ls/opt_has_pipe.first_q_reg[3]/Q
+                         net (fo=1, routed)           0.055    -0.255    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/D[3]
+    SLICE_X6Y135         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         0.452     0.452 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.932    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.145    -2.214 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.534    -1.680    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.651 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          0.943    -0.708    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/aclk
+    SLICE_X6Y135         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[3]/C
+                         clock pessimism              0.234    -0.474    
+    SLICE_X6Y135         FDRE (Hold_fdre_C_D)         0.064    -0.410    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[3]
+  -------------------------------------------------------------------
+                         required time                          0.410    
+                         arrival time                          -0.255    
+  -------------------------------------------------------------------
+                         slack                                  0.155    
+
+Slack (MET) :             0.166ns  (arrival time - required time)
+  Source:                 fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ls/opt_has_pipe.first_q_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Destination:            fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Path Group:             clk_sample_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_sample_clk_wiz_0 rise@0.000ns - clk_sample_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.219ns  (logic 0.164ns (74.792%)  route 0.055ns (25.208%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.708ns
+    Source Clock Delay      (SCD):    -0.474ns
+    Clock Pessimism Removal (CPR):    -0.234ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         0.264     0.264 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.704    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.362    -1.659 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.489    -1.170    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.144 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          0.670    -0.474    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ls/aclk
+    SLICE_X6Y135         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ls/opt_has_pipe.first_q_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y135         FDRE (Prop_fdre_C_Q)         0.164    -0.310 r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_original_sin_ls/opt_has_pipe.first_q_reg[2]/Q
+                         net (fo=1, routed)           0.055    -0.255    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/D[2]
+    SLICE_X6Y135         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         0.452     0.452 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.932    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.145    -2.214 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.534    -1.680    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.651 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          0.943    -0.708    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/aclk
+    SLICE_X6Y135         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[2]/C
+                         clock pessimism              0.234    -0.474    
+    SLICE_X6Y135         FDRE (Hold_fdre_C_D)         0.053    -0.421    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[2]
+  -------------------------------------------------------------------
+                         required time                          0.421    
+                         arrival time                          -0.255    
+  -------------------------------------------------------------------
+                         slack                                  0.166    
+
+Slack (MET) :             0.177ns  (arrival time - required time)
+  Source:                 fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_addr_reg_c/opt_has_pipe.first_q_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Destination:            fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_addr_reg_c/opt_has_pipe.i_pipe[3].pipe_reg[3][1]_srl2/D
+                            (rising edge-triggered cell SRL16E clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Path Group:             clk_sample_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_sample_clk_wiz_0 rise@0.000ns - clk_sample_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.308ns  (logic 0.141ns (45.766%)  route 0.167ns (54.234%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.014ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.709ns
+    Source Clock Delay      (SCD):    -0.474ns
+    Clock Pessimism Removal (CPR):    -0.249ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         0.264     0.264 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.704    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.362    -1.659 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.489    -1.170    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.144 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          0.670    -0.474    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_addr_reg_c/aclk
+    SLICE_X7Y135         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_addr_reg_c/opt_has_pipe.first_q_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y135         FDRE (Prop_fdre_C_Q)         0.141    -0.333 r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_addr_reg_c/opt_has_pipe.first_q_reg[1]/Q
+                         net (fo=1, routed)           0.167    -0.166    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_addr_reg_c/first_q[1]
+    SLICE_X6Y134         SRL16E                                       r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_addr_reg_c/opt_has_pipe.i_pipe[3].pipe_reg[3][1]_srl2/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         0.452     0.452 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.932    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.145    -2.214 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.534    -1.680    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.651 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          0.942    -0.709    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_addr_reg_c/aclk
+    SLICE_X6Y134         SRL16E                                       r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_addr_reg_c/opt_has_pipe.i_pipe[3].pipe_reg[3][1]_srl2/CLK
+                         clock pessimism              0.249    -0.460    
+    SLICE_X6Y134         SRL16E (Hold_srl16e_CLK_D)
+                                                      0.117    -0.343    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_addr_reg_c/opt_has_pipe.i_pipe[3].pipe_reg[3][1]_srl2
+  -------------------------------------------------------------------
+                         required time                          0.343    
+                         arrival time                          -0.166    
+  -------------------------------------------------------------------
+                         slack                                  0.177    
+
+Slack (MET) :             0.182ns  (arrival time - required time)
+  Source:                 fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Destination:            ad9767_inst/da_data_reg[5]/D
+                            (rising edge-triggered cell FDCE clocked by clk_sample_clk_wiz_0  {rise@0.000ns fall@7.813ns period=15.625ns})
+  Path Group:             clk_sample_clk_wiz_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_sample_clk_wiz_0 rise@0.000ns - clk_sample_clk_wiz_0 rise@0.000ns)
+  Data Path Delay:        0.255ns  (logic 0.141ns (55.309%)  route 0.114ns (44.691%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.706ns
+    Source Clock Delay      (SCD):    -0.473ns
+    Clock Pessimism Removal (CPR):    -0.246ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         0.264     0.264 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.704    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.362    -1.659 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.489    -1.170    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.144 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          0.671    -0.473    fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/aclk
+    SLICE_X3Y135         FDRE                                         r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y135         FDRE (Prop_fdre_C_Q)         0.141    -0.332 r  fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_piped_map.i_cardinal_sin_ls/opt_has_pipe.first_q_reg[5]/Q
+                         net (fo=1, routed)           0.114    -0.218    ad9767_inst/D[5]
+    SLICE_X2Y135         FDCE                                         r  ad9767_inst/da_data_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_sample_clk_wiz_0 rise edge)
+                                                      0.000     0.000 r  
+    Y18                                               0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen_inst/inst/clk_in1
+    Y18                  IBUF (Prop_ibuf_I_O)         0.452     0.452 r  clk_gen_inst/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.932    clk_gen_inst/inst/clk_in1_clk_wiz_0
+    MMCME2_ADV_X0Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.145    -2.214 r  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.534    -1.680    clk_gen_inst/inst/clk_sample_clk_wiz_0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.651 r  clk_gen_inst/inst/clkout1_buf/O
+                         net (fo=92, routed)          0.945    -0.706    ad9767_inst/clk_sample
+    SLICE_X2Y135         FDCE                                         r  ad9767_inst/da_data_reg[5]/C
+                         clock pessimism              0.246    -0.460    
+    SLICE_X2Y135         FDCE (Hold_fdce_C_D)         0.060    -0.400    ad9767_inst/da_data_reg[5]
+  -------------------------------------------------------------------
+                         required time                          0.400    
+                         arrival time                          -0.218    
+  -------------------------------------------------------------------
+                         slack                                  0.182    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_sample_clk_wiz_0
+Waveform(ns):       { 0.000 7.812 }
+Period(ns):         15.625
+Sources:            { clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0 }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.170         15.625      13.455     RAMB36_X0Y26     fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.170         15.625      13.455     RAMB36_X0Y27     fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_0/CLKARDCLK
+Min Period        n/a     BUFG/I              n/a            1.592         15.625      14.033     BUFGCTRL_X0Y0    clk_gen_inst/inst/clkout1_buf/I
+Min Period        n/a     MMCME2_ADV/CLKOUT0  n/a            1.249         15.625      14.376     MMCME2_ADV_X0Y0  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+Min Period        n/a     FDCE/C              n/a            1.000         15.625      14.625     SLICE_X2Y135     ad9767_inst/da_data_reg[0]/C
+Min Period        n/a     FDCE/C              n/a            1.000         15.625      14.625     SLICE_X2Y136     ad9767_inst/da_data_reg[10]/C
+Min Period        n/a     FDCE/C              n/a            1.000         15.625      14.625     SLICE_X2Y136     ad9767_inst/da_data_reg[11]/C
+Min Period        n/a     FDCE/C              n/a            1.000         15.625      14.625     SLICE_X4Y136     ad9767_inst/da_data_reg[12]/C
+Min Period        n/a     FDCE/C              n/a            1.000         15.625      14.625     SLICE_X4Y136     ad9767_inst/da_data_reg[13]/C
+Min Period        n/a     FDCE/C              n/a            1.000         15.625      14.625     SLICE_X4Y138     ad9767_inst/da_data_reg[1]/C
+Max Period        n/a     MMCME2_ADV/CLKOUT0  n/a            213.360       15.625      197.735    MMCME2_ADV_X0Y0  clk_gen_inst/inst/mmcm_adv_inst/CLKOUT0
+Low Pulse Width   Slow    SRL16E/CLK          n/a            0.854         7.812       6.959      SLICE_X6Y134     fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_addr_reg_c/opt_has_pipe.i_pipe[3].pipe_reg[3][1]_srl2/CLK
+Low Pulse Width   Fast    SRL16E/CLK          n/a            0.854         7.812       6.959      SLICE_X6Y134     fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_addr_reg_c/opt_has_pipe.i_pipe[3].pipe_reg[3][1]_srl2/CLK
+Low Pulse Width   Slow    FDCE/C              n/a            0.500         7.812       7.312      SLICE_X4Y138     ad9767_inst/da_data_reg[1]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         7.812       7.312      SLICE_X7Y131     fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_PHASEGEN.i_conventional_accum.i_accum/i_fabric.i_common.i_phase_acc/opt_has_pipe.first_q_reg[1]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         7.812       7.312      SLICE_X7Y131     fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_PHASEGEN.i_conventional_accum.i_accum/i_fabric.i_common.i_phase_acc/opt_has_pipe.first_q_reg[2]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         7.812       7.312      SLICE_X7Y131     fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_PHASEGEN.i_conventional_accum.i_accum/i_fabric.i_common.i_phase_acc/opt_has_pipe.first_q_reg[3]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         7.812       7.312      SLICE_X7Y132     fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_PHASEGEN.i_conventional_accum.i_accum/i_fabric.i_common.i_phase_acc/opt_has_pipe.first_q_reg[4]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         7.812       7.312      SLICE_X7Y132     fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_PHASEGEN.i_conventional_accum.i_accum/i_fabric.i_common.i_phase_acc/opt_has_pipe.first_q_reg[5]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         7.812       7.312      SLICE_X7Y132     fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_PHASEGEN.i_conventional_accum.i_accum/i_fabric.i_common.i_phase_acc/opt_has_pipe.first_q_reg[6]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         7.812       7.312      SLICE_X7Y132     fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_PHASEGEN.i_conventional_accum.i_accum/i_fabric.i_common.i_phase_acc/opt_has_pipe.first_q_reg[7]/C
+High Pulse Width  Fast    SRL16E/CLK          n/a            0.854         7.812       6.958      SLICE_X6Y134     fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_addr_reg_c/opt_has_pipe.i_pipe[3].pipe_reg[3][1]_srl2/CLK
+High Pulse Width  Slow    SRL16E/CLK          n/a            0.854         7.812       6.959      SLICE_X6Y134     fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_addr_reg_c/opt_has_pipe.i_pipe[3].pipe_reg[3][1]_srl2/CLK
+High Pulse Width  Slow    FDCE/C              n/a            0.500         7.812       7.312      SLICE_X2Y136     ad9767_inst/da_data_reg[10]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.500         7.812       7.312      SLICE_X2Y136     ad9767_inst/da_data_reg[11]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.500         7.812       7.312      SLICE_X2Y136     ad9767_inst/da_data_reg[7]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.500         7.812       7.312      SLICE_X2Y136     ad9767_inst/da_data_reg[8]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         7.812       7.312      SLICE_X7Y134     fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_PHASEGEN.i_conventional_accum.i_accum/i_fabric.i_common.i_phase_acc/opt_has_pipe.first_q_reg[15]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         7.812       7.312      SLICE_X7Y132     fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_PHASEGEN.i_conventional_accum.i_accum/i_fabric.i_common.i_phase_acc/opt_has_pipe.first_q_reg[4]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         7.812       7.312      SLICE_X7Y132     fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_PHASEGEN.i_conventional_accum.i_accum/i_fabric.i_common.i_phase_acc/opt_has_pipe.first_q_reg[5]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         7.812       7.312      SLICE_X7Y132     fsk_mod_inst/dds_compiler_inst/U0/i_synth/i_dds/I_PHASEGEN.i_conventional_accum.i_accum/i_fabric.i_common.i_phase_acc/opt_has_pipe.first_q_reg[6]/C
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clkfbout_clk_wiz_0
+  To Clock:  clkfbout_clk_wiz_0
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack       18.408ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clkfbout_clk_wiz_0
+Waveform(ns):       { 0.000 10.000 }
+Period(ns):         20.000
+Sources:            { clk_gen_inst/inst/mmcm_adv_inst/CLKFBOUT }
+
+Check Type  Corner  Lib Pin              Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period  n/a     BUFG/I               n/a            1.592         20.000      18.408     BUFGCTRL_X0Y1    clk_gen_inst/inst/clkf_buf/I
+Min Period  n/a     MMCME2_ADV/CLKFBOUT  n/a            1.249         20.000      18.751     MMCME2_ADV_X0Y0  clk_gen_inst/inst/mmcm_adv_inst/CLKFBOUT
+Min Period  n/a     MMCME2_ADV/CLKFBIN   n/a            1.249         20.000      18.751     MMCME2_ADV_X0Y0  clk_gen_inst/inst/mmcm_adv_inst/CLKFBIN
+Max Period  n/a     MMCME2_ADV/CLKFBIN   n/a            100.000       20.000      80.000     MMCME2_ADV_X0Y0  clk_gen_inst/inst/mmcm_adv_inst/CLKFBIN
+Max Period  n/a     MMCME2_ADV/CLKFBOUT  n/a            213.360       20.000      193.360    MMCME2_ADV_X0Y0  clk_gen_inst/inst/mmcm_adv_inst/CLKFBOUT
+
+
+
