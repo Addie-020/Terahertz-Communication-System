@@ -1,0 +1,1 @@
+dds_compiler_0.vhd,vhdl,xil_defaultlib,../../../../FSK_Modulation_Project.srcs/sources_1/ip/dds_compiler_0/sim/dds_compiler_0.vhd,
