@@ -1,10 +1,10 @@
 # Terahertz Communication System
 ## Latest Version
-Date: 2023.05.19
+**Date: 2023.05.19**
 
 ## Early Versisons
 ### Version 1.0
-Date: 2022.09.24
+**Date: 2022.09.24**
 
 This repository stores some materials of the project on Terahertz Communication.
 
